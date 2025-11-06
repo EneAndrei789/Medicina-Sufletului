@@ -1,0 +1,25 @@
+/* Simple clear/home styles */
+.home-root {
+  min-height: 100vh;
+  background: #ffffff; /* clear white background */
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container {
+  max-width: 900px;
+  padding: 24px;
+  text-align: center;
+}
+
+.home-container h1 {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+}
+
+.home-container p {
+  margin: 0;
+  color: #444;
+}
