@@ -1,9 +1,5 @@
 import './Module.css';
 
-export function Module() {
-    return (
-        <h1>module</h1>
-    )
+export default function Module() {
+  return <h1>Pagina Module</h1>
 }
-
-export default Module;

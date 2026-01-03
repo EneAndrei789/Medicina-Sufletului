@@ -1,4 +1,5 @@
 /* Simple clear/home styles */
+
 .home-root {
   min-height: 100vh;
   background: #ffffff; /* clear white background */
@@ -10,7 +11,7 @@
 
 .home-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
     /* Sidebar */
@@ -45,5 +46,50 @@
 .content-inner {
   width: 100%;
   max-width: 900px;
-  padding: 20px;
+  padding: 40px;
+  padding-left: 90px;
 }
+
+
+/* Module Styles */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */
+  grid-auto-rows: 1fr;                   /* righe si espandono in altezza */
+  gap: 60px;
+  width: 100vh;
+  height: 100%;  /* riempie tutto lo spazio verticale di home-content */
+}
+
+.module-card {
+  background: white;
+  border-radius: 12px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%; /* card occupa tutta l’altezza della riga */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  height: 100%;
+}
+
+.module-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.module-card p {
+  font-size: 1.2rem;
+}
+
