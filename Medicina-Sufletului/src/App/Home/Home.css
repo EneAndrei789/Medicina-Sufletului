@@ -9,9 +9,15 @@
   justify-content: center;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .home-container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
     /* Sidebar */
@@ -21,6 +27,9 @@
   background: #1e1e2f;
   color: white;
   padding: 20px;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .sidebar ul {
@@ -35,19 +44,17 @@
 
       /* Content */
 
-.content {
+.home-content {
   flex: 1;
   padding: 30px;
   background: #f5f5f5;
-  justify-content: center;
-  align-items: center;
+  overflow-y: auto;
 }
 
 .content-inner {
   width: 100%;
-  max-width: 900px;
+  /* max-width: 900px; */
   padding: 40px;
-  padding-left: 90px;
 }
 
 
@@ -55,11 +62,9 @@
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */
-  grid-auto-rows: 1fr;                   /* righe si espandono in altezza */
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */                
   gap: 60px;
-  width: 100vh;
-  height: 100%;  /* riempie tutto lo spazio verticale di home-content */
+  width: 100%;
 }
 
 .module-card {
@@ -74,7 +79,7 @@
   justify-content: center;
   align-items: center;
 
-  height: 100%; /* card occupa tutta l’altezza della riga */
+  min-height: 320px; /* card occupa tutta l’altezza della riga */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
