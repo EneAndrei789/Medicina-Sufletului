@@ -72,7 +72,7 @@ export const moduleImages = [
     id: 1,
     title: "Modulo 1",
     description: "Rugăciunea de conectare",
-    image: "/images/module-images/home-page-images/rugaciuneaDeConectare-ezgif.com-webp-to-jpg-converter.jpg"
+    image: ""
   },
 
   {
