@@ -155,7 +155,7 @@ export default function Home() {
 }
 
 
-export const moduleImages = [
+export const moduleImages = [ 
   {
     id: 1,
     title: "Rugăciunea de conectare",
@@ -236,21 +236,21 @@ export const moduleImages = [
   {
 	id : 12,
 	title: "Activarea Scutului de Protectie",
-	description: "Pentru o mai buna protectie va recomand sa activati un scut de protectie divina ",
+	description: "Pentru o mai buna protectie va recomand sa activati un scut de protectie divina. Aceasta este o forma de energie de inalta vibratie care va lasa doar lumina divina sa ajunga la tine si orice energie de joasa vibratie sa ramana la distanta ",
 	image: "/images/module-images/Home Page Images/Activarea scutului de protectie.webp"
   },
 
   {
 	id : 13,
 	title: "Scutul Biologic",
-	description: "Scutul Biologic",
-	image: "/images/module-images/Home Page Images/Scut biologic.webp"
+	description: "Fiecare parte distincta din corpul nostru are un scut biologic. Acesta are rolul de a nu permite factorilor  externi sa deterioreze aceasta parte. Acest scut poate fi afectat. In aceasta situatie, testam kinesiologicc cat la suta a fost afectat acest scut, gasim cauzele, le eliminam si vom reactiva acest scut biologic cu rugaciunea urmatoare:",
+  image: "/images/module-images/Home Page Images/Scutul biologic.webp"
   },
 
   {
 	id : 14,
 	title: "Rugaciunea de Multumire",
-	description: "Rugaciunea de Multumire",
+	description: "Rugaciunea de multumire este exprimarea gratitudinii fatta de ajutorul primit de la Dumnezeu.",
 	image: "/images/module-images/Home Page Images/Rugaciunea de multumire.webp"
   }
 
