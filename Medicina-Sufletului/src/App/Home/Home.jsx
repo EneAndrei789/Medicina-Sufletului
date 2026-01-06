@@ -72,9 +72,8 @@ export default function Home() {
 							{module.title}</h3>
 
     						<p style={{
-							fontSize: '14px',
+							  fontSize: '14px',
   							textAlign: 'left',
-							
 							}}>
 							{module.description}</p>
   					</div>
