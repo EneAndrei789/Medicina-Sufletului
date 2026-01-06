@@ -136,7 +136,7 @@ export default function Home() {
         alt={selectedModule.title} 
         style={{ maxWidth: '100%', margin: '20px 0' }}
       />
-      <p>{selectedModule.description}</p>
+      <p>{selectedModule.modalContent}</p>
 
       {/* Qui puoi aggiungere altri contenuti specifici del modulo */}
     </div>
@@ -160,14 +160,16 @@ export const moduleImages = [
     id: 1,
     title: "Rugăciunea de conectare",
     description: "Rugaciunea de conectare este o forma de energie de vibratie inalta care ne ajuta sa accesam subconstientul",
-    image: "/images/module-images/Home Page Images/Rugaciunea de conectare.jpg"
+    image: "/images/module-images/Home Page Images/Rugaciunea de conectare.jpg",
+    modalContent: "Rugaciunea de conectare este ..."
   },
 
   {
 	id : 2,
 	title: "Dezechilibru",
 	description: "Dezechilibrele sunt forme de energie reziduala, nefavorabila, care afecteaza corpul fizic mental si emotional",
-	image: "/images/module-images/Home Page Images/Dezecchilibru.webp"
+	image: "/images/module-images/Home Page Images/Dezecchilibru.webp",
+  modalContent: "Dezechilibrele sunt forme de energie reziduala..."
   },
 
   {
