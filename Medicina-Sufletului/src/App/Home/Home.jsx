@@ -130,6 +130,8 @@ export default function Home() {
         ✖
       </button>
 
+        {/* CONTENUTO MODAL */}
+
       <h2>{selectedModule.title}</h2>
       <img 
         src={selectedModule.image} 
@@ -138,16 +140,20 @@ export default function Home() {
       />
       <p>{selectedModule.modalContent}</p>
 
+
       {/* Qui puoi aggiungere altri contenuti specifici del modulo */}
     </div>
   </div>
 )}
 
-	
+  
 
 			{/* Account Section */}
 
           {section === 'account' && <h1>Contenuto Account</h1>}
+
+
+
         </div>
       </main>
     </div>
@@ -161,7 +167,7 @@ export const moduleImages = [
     title: "Rugăciunea de conectare",
     description: "Rugaciunea de conectare este o forma de energie de vibratie inalta care ne ajuta sa accesam subconstientul",
     image: "/images/module-images/Home Page Images/Rugaciunea de conectare.jpg",
-    modalContent: "Rugaciunea de conectare este ..."
+    modalContent: "Rugaciunea de conectare este ...",
   },
 
   {
