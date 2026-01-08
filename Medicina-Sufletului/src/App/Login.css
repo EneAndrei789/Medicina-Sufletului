@@ -105,8 +105,16 @@ body {
   border: 1px solid #ccc;
   font-family: inherit;
   background-color: #ffffff;
-  color: grey;
+  color: rgb(61, 60, 60);
   cursor: pointer;
+}
+
+.input-submit:hover {
+  background-color: #c1bebe85;
+}
+
+.input-submit:active {
+  background-color: #949292a4;
 }
 
 /* -------------------- responsive -------------------- */
