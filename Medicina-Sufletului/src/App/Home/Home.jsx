@@ -1,6 +1,10 @@
 import './Home.css';
 import { useState } from 'react';
 
+
+import Rugaciunea from './modules/Rugaciunea/rugaciunea';
+import Dezechilibru from './modules/dezechilibru/dezechilibru';
+
 export default function Home() {
   // Stato per capire quale sezione mostrare
   const [section, setSection] = useState('module'); // di default Module
@@ -131,13 +135,17 @@ export default function Home() {
 
         {/* CONTENUTO MODAL */}
 
-      <h2>{selectedModule.title}</h2>
+        {selectedModule.Component && (
+    <selectedModule.Component />
+  )}
+
+      {/* <h2>{selectedModule.title}</h2>
       <img 
         src={selectedModule.image} 
         alt={selectedModule.title} 
         style={{ maxWidth: '100%', margin: '20px 0' }}
-      />
-      <p>{selectedModule.modalContent}</p>
+      /> */}
+      {/* <p>{selectedModule.modalContent}</p> */}
 
 
       {/* Qui puoi aggiungere altri contenuti specifici del modulo */}
@@ -166,7 +174,7 @@ export const moduleImages = [
     title: "Rugăciunea de conectare",
     description: "Rugaciunea de conectare este o forma de energie de vibratie inalta care ne ajuta sa accesam subconstientul",
     image: "/images/module-images/Home Page Images/Rugaciunea de conectare.jpg",
-    modalContent: "Rugaciunea de conectare este ...",
+    Component: Rugaciunea,
   },
 
   {
@@ -174,7 +182,7 @@ export const moduleImages = [
 	title: "Dezechilibru",
 	description: "Dezechilibrele sunt forme de energie reziduala, nefavorabila, care afecteaza corpul fizic mental si emotional",
 	image: "/images/module-images/Home Page Images/Dezecchilibru.webp",
-  modalContent: "Dezechilibrele sunt forme de energie reziduala..."
+  Component: Dezechilibru,
   },
 
   {
