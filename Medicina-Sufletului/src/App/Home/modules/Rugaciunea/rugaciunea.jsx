@@ -6,11 +6,14 @@ export default function Rugaciunea() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+const audioPath = "/Audio/rugaciunea-de-conectare.mp3"; 
   return (
     <div>
       <div className="title-rugaciunea-de-conectare">
         <h2>Rugăciunea de conectare</h2>
       </div>
+
+       <button className='button-rugaciunea' onClick={() => setIsOpen(true)}>Audio</button>
       
       <p className='paragraph-rugaciunea-de-conectare'>Vom spune rugaciunea de incepere a sesiunii noastre. <br /> <br /> In numele Tatalui si al Fiului si al Sfantului Duh. Amin.
 
@@ -44,20 +47,16 @@ Sunt conectat(ă) la Puterea Divină, în minte, corp și spirit. <br /> <br />
 
 Amin!</p>
 
-    <button className='button-rugaciunea' onClick={() => setIsOpen(true)}>Audio</button>
-
     {/* MODAL AUDIO */}
 
     {isOpen && (
       <div className='modal-overlay' onClick={() => setIsOpen(false)}>
-        <div className='modal-content' onClick={e => e.stopPropagation()}></div>
-        <h3>Rugaciunea de conectare</h3>
-
-        <audio controls  src="/audio/rugaciunea-de-conectare.mp3" />
-
-        <button className='close-modal' onClick={() => setIsOpen(false)}>
-          Închide
-        </button>
+        <div className='modal-content' onClick={e => e.stopPropagation()}>
+          <h3>Rugaciunea de conectare</h3>
+          <audio controls>
+            <source src={audioPath} type="audio/mpeg" />
+          </audio>
+          </div>
       </div>
     )}
     </div>
