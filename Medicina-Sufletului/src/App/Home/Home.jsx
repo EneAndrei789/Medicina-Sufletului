@@ -187,7 +187,7 @@ export const moduleImages = [
 	title: "Dezechilibru",
 	description: "Dezechilibrele sunt forme de energie reziduala, nefavorabila, care afecteaza corpul fizic mental si emotional",
 	image: "/images/module-images/home-page-images/Dezecchilibru.webp",
-  // Component: Dezechilibru,
+  Component: Dezechilibru,
   },
 
   {
