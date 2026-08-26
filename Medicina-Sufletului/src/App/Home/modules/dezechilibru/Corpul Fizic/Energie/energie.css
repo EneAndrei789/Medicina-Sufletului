@@ -1,5 +1,4 @@
-
-.dezechilibru-container {
+.energie-container {
   padding: 40px 20px;
   background-color: #f5f5f7; /* Lighter, cleaner background */
   color: #333;
@@ -9,7 +8,7 @@
   align-items: center;
 }
 
-.dezechilibru-container h2 {
+.energie-container h2 {
   margin-bottom: 30px;
   font-family: 'Segoe UI', sans-serif;
   font-weight: 600;
@@ -17,7 +16,7 @@
   color: #222;
 }
 
-.dezechilibru-module-cards {
+.energie-module-cards {
   display: grid;
   /* This creates 1 column on mobile, and up to 3 columns on desktop */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -26,7 +25,7 @@
   max-width: 1100px; /* Prevents cards from getting too wide */
 }
 
-.dezechillibru-main-cards {
+.energie-main-cards {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +38,7 @@
   cursor: pointer;
 }
 
-.dezechillibru-main-cards h3 {
+.energie-main-cards h3 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
@@ -47,13 +46,13 @@
 }
 
 /* Hover Effect */
-.dezechillibru-main-cards:hover {
+.energie-main-cards:hover {
   transform: translateY(-5px); /* Lift card up */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   background-color: #a8a5a5;
   color: white;
 }
 
-.dezechillibru-main-cards:hover h3 {
+.energie-main-cards:hover h3 {
   color: white;
 }
