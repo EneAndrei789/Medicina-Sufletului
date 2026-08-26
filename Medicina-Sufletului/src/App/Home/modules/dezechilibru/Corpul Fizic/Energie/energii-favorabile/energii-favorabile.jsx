@@ -3,29 +3,207 @@ import './energii-favorabile.css';
 
 export default function TabelulEnergiilorFavorabile() {
 
-  const coloanaA = [
-    'Pace',
-    'Iubire',
-    'Credință',
-    'Nădejde',
-    'Curaj',
-    'Entuziasm',
-    'Perseverență',
-    'Prosperitate',
-    'Statornicie'
-  ];
+ const righe = [
+  {
+    nome: 'Rândul 1',
 
-  const coloanaB = [
-    'Claritate',
-    'Prezență',
-    'Înțelegere',
-    'Generozitate',
-    'Comunicare ușoară',
-    'Succes',
-    'Motivație',
-    'Consecvență',
-    'Deschidere către creativitate'
-  ];
+    colonnaA: [
+      'Pace',
+      'Iubire',
+      'Credință',
+      'Nădejde',
+      'Curaj',
+      'Entuziasm',
+      'Perseverență',
+      'Prosperitate',
+      'Statornicie'
+    ],
+
+    colonnaB: [
+      'Claritate',
+      'Prezență',
+      'Înțelegere',
+      'Generozitate',
+      'Comunicare ușoară',
+      'Succes',
+      'Motivație',
+      'Consecvență',
+      'Deschidere către creativitate'
+    ]
+  },
+
+  {
+    nome: 'Rândul 2',
+
+    colonnaA: [
+      'Blândețe',
+      'Bunătate',
+      'Fertilitate',
+      'Împăcare',
+      'Spațiu necesar vindecării',
+      'Voință',
+      'Recăpătarea puterii',
+      'Prospețime'
+    ],
+
+    colonnaB: [
+        'Smerenie',
+        'Inaltare',
+        'Sfintenie',
+        'Izbavire',
+        'Incredere',
+        'Ancorare in realitate',
+        'Staruinta in bine'
+    ]
+  },
+
+  {
+    nome: 'Rândul 3',
+
+    colonnaA: [
+      'Echilibru',
+      'Acceptare',
+      'Respect',
+      'Stabilitate',
+      'Intelepciune'
+    ],
+
+    colonnaB: [
+     'Regenerare',
+     'Statornicie',
+     'Procesare',
+     'Detasare',
+     'Intentie'
+    ]
+  },
+
+  {
+    nome: 'Randul 4',
+    colonnaA: [
+        'Recunostinta',
+        'Iertare',
+        'Frumusete',
+        'Puritate',
+        'Ancorare'
+    ],
+
+    colonnaB: [
+        'Stapanire de sine',
+        'Cumpatare',
+        'Adevar',
+        'Fortificare',
+        'Creativitate'
+    ]
+  },
+
+  {
+    nome: 'Randul 5',
+    colonnaA: [
+        'Fermitate',
+        'Ordonare',
+        'Vitalitate',
+        'Rabdare',
+        'Inspiratie'
+    ],
+
+    colonnaB: [
+        'Maleabilitate',
+        'Liniste',
+        'Desavarsire',
+        'Intelepciune',
+        'Determinare'
+    ]
+  },
+
+  {
+    nome: 'Randul 6',
+    colonnaA: [
+        'Prospetime',
+        'Descalcinare',
+        'Deblocare',
+        'Cunoaștere',
+        'Trezvie'
+    ],
+
+    colonnaB: [
+        'Hotărâre',
+        'Relaxare',
+        'Incredere',
+        'Stop factorilor de stres',
+        'Sanatate'
+    ]
+  },
+
+  {
+    nome: 'Randul 7',
+    colonnaA: [
+        'Flexibilitate',
+        'Renastere',
+        'Calmare',
+        'Armonie',
+        'Adaptare usuoara'
+    ],
+
+    colonnaB: [
+        'Reactivare',
+        'Limpezire',
+        'Lumina',
+        'Staruinta in bine',
+        'Capacitate'
+    ]
+  },
+
+  {
+    nome:'Randul 8',
+    colonnaA: [
+        'Creativitate',
+        'Concentrare',
+        'Siguranta',
+        'Amabilitate',
+        'Hotarare'
+    ],
+
+    colonnaB: [
+        'Putere',
+        'Corectitudine',
+        'Curatenie',
+        'Mangaiere',
+        'Purificare'
+    ]
+  },
+
+  {
+    nome: 'Randul 9',
+    colonnaA: [
+        'Securizarea zonei afectate',
+        'Ocrotire',
+        'Protectie',
+        'Iubirea aproapelui',
+        'Activarea apetitului'
+    ],
+
+    colonnaB: [
+        'Curatenie',
+        'Detasare',
+        'Apropiere',
+        'Ingaduinta',
+        'Invingatori'
+    ]
+  },
+
+  {
+    nome: 'Randul 10',
+    colonnaA: [
+        'Alimentare corecta'
+    ],
+
+    colonnaB: [
+        'Entuziasm'
+    ]
+  }
+
+
+];
 
   const playEnergy = (energy) => {
     console.log('Play:', energy);
@@ -47,63 +225,59 @@ export default function TabelulEnergiilorFavorabile() {
         </thead>
 
         <tbody>
-          <tr>
+  {righe.map((riga, index) => (
+    <tr key={index}>
 
-            {/* Prima colonna */}
-            <td className="rand-cell">
-              <span>Rândul 1</span>
-            </td>
+      <td className="rand-cell">
+        {riga.nome}
+      </td>
 
-            {/* Coloana A */}
-            <td className="energy-cell">
-              <div className="energy-list">
+      <td className="energy-cell">
+        <div className="energy-list">
 
-                {coloanaA.map((energy, index) => (
-                  <div
-                    className="energy-item"
-                    key={index}
-                  >
-                    <span>{energy}</span>
+          {riga.colonnaA.map((energy, index) => (
+            <div className="energy-item" key={index}>
 
-                    <button
-                      className="play-button"
-                      onClick={() => playEnergy(energy)}
-                      aria-label={`Redă ${energy}`}
-                    >
-                      ▶
-                    </button>
-                  </div>
-                ))}
+              <span>{energy}</span>
 
-              </div>
-            </td>
+              <button
+                className="play-button"
+                onClick={() => playEnergy(energy)}
+              >
+                ▶
+              </button>
 
-            {/* Coloana B */}
-            <td className="energy-cell">
-              <div className="energy-list">
+            </div>
+          ))}
 
-                {coloanaB.map((energy, index) => (
-                  <div
-                    className="energy-item"
-                    key={index}
-                  >
-                    <span>{energy}</span>
+        </div>
+      </td>
 
-                    <button
-                      className="play-button"
-                      onClick={() => playEnergy(energy)}
-                      aria-label={`Redă ${energy}`}
-                    >
-                      ▶
-                    </button>
-                  </div>
-                ))}
+      <td className="energy-cell">
+        <div className="energy-list">
 
-              </div>
-            </td>
+          {riga.colonnaB.map((energy, index) => (
+            <div className="energy-item" key={index}>
 
-          </tr>
-        </tbody>
+              <span>{energy}</span>
+
+              <button
+                className="play-button"
+                onClick={() => playEnergy(energy)}
+              >
+                ▶
+              </button>
+
+            </div>
+          ))}
+
+        </div>
+      </td>
+
+    </tr>
+  ))}
+</tbody>
+
 
       </table>
 

@@ -12,10 +12,10 @@
 ========================= */
 
 .tabel-energiilor {
-  width: 100%;
+ width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  background-color: #1d1d1d;
 }
 
 
