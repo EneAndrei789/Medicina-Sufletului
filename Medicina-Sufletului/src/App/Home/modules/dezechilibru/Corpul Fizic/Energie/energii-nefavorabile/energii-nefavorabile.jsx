@@ -1,5 +1,5 @@
 import React from "react";
-import "./energii-nefavorabile.css";
+import "./energii.nefavorabile.css";
 
 export default function TabelulEnergiilorNefavorabile() {
 
@@ -217,7 +217,166 @@ export default function TabelulEnergiilorNefavorabile() {
                 'Inflexibilitate',
                 'Scepticism'
             ]
-         }
-    ]
+         },
+
+         {
+            nome: 'Randul 9',
+            colonnaA: [
+                'Nepasare',
+                'Conflict',
+                'Posesiune',
+                'Cruzime',
+                'Nestatornicie',
+                'Cinism',
+                'Dezorientare',
+                'Energie de uscaciune',
+                'Repros'
+            ],
+
+            colonnaB: [
+                'Dezaprobare',
+                'Suspiciune',
+                'Vinovatie',
+                'Neajutoare',
+                'Greata',
+                'Revolta',
+                'Dusmanie',
+                'Ceata mentala',
+                'Ezitare'
+            ]
+         },
+
+         {
+            nome: 'Randul 10',
+            colonnaA: [
+                'Lipsa de entuzuiasm',
+                'Pesimism',
+                'Violenta',
+                'Dubiu',
+                'Lipsa de respect',
+                'Remuscare',
+                'Iubire neprimita',
+                'Lipsa de inganduinta',
+                'Devalorizare'
+            ],
+
+            colonnaB: [
+                'Supunere',
+                'Minciuna',
+                'Comoditate',
+                'Micsorare',
+                'Suspiciune',
+                'Insistenta',
+                'Suflet ranit',
+                'Descurajare',
+                'Tortura'
+            ]
+        },
+
+        {
+            nome: 'Randul 11',
+            colonnaA: [
+                'Dusmanie',
+                'Vrajba',
+                'Invidie',
+                'Lehamite',
+                'Inlantuire',
+                'Hartuire',
+                'Impotrivire',
+                'Dezamagire',
+                'Deochi'
+            ],
+
+            colonnaB: [
+                'Piatra de moara',
+                'Plans',
+                'Risipa',
+                'Inima rupta',
+                'Hartuire',
+                'Tulburare',
+                'Sacrificiu',
+                'Cearta',
+                'Inflamatie'
+            ]
+        },
+
+        {
+            nome: 'Randul 12',
+            colonnaA: [
+                'Intimidare',
+                'Cedarea puterii',
+                'Devitalizare',
+                'Tortura'
+            ],
+
+            colonnaB: [
+                'Superioritate',
+                'Zgarcenie',
+                'Inima grea',
+                'Demoralizare'
+            ]
+        }
+    ];
+
+    const playEnergy = (energy) => {
+    console.log('Play:', energy);
+
+    // Qui in futuro puoi mettere la riproduzione audio
+  };
+
+    return (
+        <div className="tabel-energiilor-container">
+            <table className="tabel-energiilor">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Coloana A</th>
+                        <th>Coloana B</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {righe.map((riga, index) => (
+                        <tr key= {index}>
+                            <td className="rand-cell">
+                                {riga.nome}
+                            </td>
+
+                            <td className="energy-cell">
+                                <div className="energy-list">
+                                    {riga.colonnaA.map((energy, index) => (
+                                        <div className="energy-item" key={index}>
+                                            <span>{energy}</span>
+
+                                            <button className="play-button" onAuxClickCapture={() => playEnergy(energy)}>
+                                                ▶
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </td>
+
+                            <td className="energy-cell">
+                                    <div className="energy-list">
+
+                                        {riga.colonnaB.map((energy, index) => (
+                                            <div className="energy-item" key={index}>
+                                                <span>{energy}</span>
+
+                                                <button className="play-button" onClick={() => playEnergy(energy)}>
+                                                    ▶
+                                                </button>
+                                            </div>
+                                        ))}
+
+                                    </div>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+
+            </table>
+        </div>
+    )
 
 }

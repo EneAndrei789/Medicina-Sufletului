@@ -1,0 +1,204 @@
+.tabel-energiilor-container {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #1d1d1d;
+  color: white;
+}
+
+
+/* =========================
+   TABEL
+========================= */
+
+.tabel-energiilor {
+ width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+
+/* =========================
+   CELLE
+========================= */
+
+.tabel-energiilor th,
+.tabel-energiilor td {
+  border: 1px solid #19b8f2;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.tabel-energiilor th {
+  height: 38px;
+  padding: 5px 7px;
+
+  text-align: left;
+
+  color: #999;
+  font-size: 18px;
+  font-weight: 600;
+
+  background-color: #1d1d1d;
+}
+
+
+/* Prima cella dell'header */
+
+.tabel-energiilor th:first-child {
+  width: 25%;
+}
+
+
+/* Colonna A e B */
+
+.tabel-energiilor th:nth-child(2),
+.tabel-energiilor th:nth-child(3) {
+  width: 37.5%;
+}
+
+
+/* =========================
+   RIGA
+========================= */
+
+.tabel-energiilor tbody tr {
+  height: 575px;
+}
+
+
+/* =========================
+   PRIMA COLONNA
+========================= */
+
+.rand-cell {
+  vertical-align: top;
+  text-align: center;
+
+  padding-top: 10px;
+
+  color: #999;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   COLONNE ENERGIE
+========================= */
+
+.energy-cell {
+  vertical-align: top;
+  padding: 20px 25px;
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.energy-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+
+/* =========================
+   SINGOLA ENERGIA
+========================= */
+
+.energy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 33px;
+
+  color: #f1f1f1;
+  font-size: 16px;
+}
+
+
+/* =========================
+   PULSANTE PLAY
+========================= */
+
+.play-button {
+  width: 45px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: #22dc78;
+  color: #111;
+
+  font-size: 19px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+/* Hover */
+
+.play-button:hover {
+  background-color: #38ef8a;
+  transform: scale(1.05);
+}
+
+
+/* Click */
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .tabel-energiilor-container {
+    padding: 8px;
+  }
+
+  .tabel-energiilor th {
+    font-size: 14px;
+  }
+
+  .energy-cell {
+    padding: 15px 10px;
+  }
+
+  .energy-item {
+    font-size: 14px;
+  }
+
+  .play-button {
+    width: 38px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .energy-list {
+    gap: 22px;
+  }
+
+}
