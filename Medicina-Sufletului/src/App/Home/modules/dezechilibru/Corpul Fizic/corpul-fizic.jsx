@@ -4,6 +4,7 @@ import './corpul-fizic.css';
 import { useState } from 'react';
 
 import Energie from './Energie/energie';
+import Infectie from './Infectii/infectii'
 
 
 export default function CorpulFizic({ onBack }) {
@@ -13,6 +14,12 @@ export default function CorpulFizic({ onBack }) {
         return (
             <Energie></Energie>
         );
+    }
+
+    if (section === 'infectii') {
+      return (
+        <Infectie></Infectie>
+      );
     }
 
   return (
@@ -27,7 +34,8 @@ export default function CorpulFizic({ onBack }) {
             <h3>Energie</h3>
         </div>
 
-        <div className="corpul-fizic-main-cards">
+        <div className="corpul-fizic-main-cards"
+        onClick={() => setSection('infectii')}>
           <h3>Infectii</h3>
         </div>
 

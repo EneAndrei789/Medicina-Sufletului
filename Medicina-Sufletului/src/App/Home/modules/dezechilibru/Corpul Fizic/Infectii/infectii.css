@@ -1,0 +1,72 @@
+.infectii-container {
+  padding: 40px 20px;
+  background-color: #f5f5f7;
+  color: #333;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infectii-container h2 {
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.infectii-module-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.infectii-main-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.infectii-main-cards h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Bottone Play */
+.play-button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Effetto hover sul bottone */
+.play-button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+/* Effetto hover sulla card */
+.infectii-main-cards:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
